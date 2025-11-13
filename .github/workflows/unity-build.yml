@@ -1,0 +1,105 @@
+name: Unity Build
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'unity-project/**'
+  pull_request:
+    branches: [ main, develop ]
+
+env:
+  UNITY_VERSION: 2022.3.16f1
+
+jobs:
+  test:
+    name: Test Unity Project
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          lfs: true
+
+      - name: Cache Unity Library
+        uses: actions/cache@v3
+        with:
+          path: unity-project/Library
+          key: Library-${{ hashFiles('unity-project/**') }}
+          restore-keys: Library-
+
+      - name: Run Unity Tests
+        uses: game-ci/unity-test-runner@v2
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          projectPath: unity-project
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+
+  build-ios:
+    name: Build for iOS
+    runs-on: macos-latest
+    needs: test
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          lfs: true
+
+      - name: Cache Unity Library
+        uses: actions/cache@v3
+        with:
+          path: unity-project/Library
+          key: Library-iOS-${{ hashFiles('unity-project/**') }}
+
+      - name: Build Unity Project for iOS
+        uses: game-ci/unity-builder@v2
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          projectPath: unity-project
+          targetPlatform: iOS
+          buildName: EmpireGenesis
+
+      - name: Upload iOS Build
+        uses: actions/upload-artifact@v3
+        with:
+          name: ios-build
+          path: build/iOS
+
+  build-android:
+    name: Build for Android
+    runs-on: ubuntu-latest
+    needs: test
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          lfs: true
+
+      - name: Cache Unity Library
+        uses: actions/cache@v3
+        with:
+          path: unity-project/Library
+          key: Library-Android-${{ hashFiles('unity-project/**') }}
+
+      - name: Build Unity Project for Android
+        uses: game-ci/unity-builder@v2
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ANDROID_KEYSTORE_PASS: ${{ secrets.ANDROID_KEYSTORE_PASS }}
+          ANDROID_KEYALIAS_NAME: ${{ secrets.ANDROID_KEYALIAS_NAME }}
+          ANDROID_KEYALIAS_PASS: ${{ secrets.ANDROID_KEYALIAS_PASS }}
+        with:
+          projectPath: unity-project
+          targetPlatform: Android
+          buildName: EmpireGenesis.aab
+
+      - name: Upload Android Build
+        uses: actions/upload-artifact@v3
+        with:
+          name: android-build
+          path: build/Android/*.aab
