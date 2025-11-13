@@ -1,0 +1,488 @@
+{
+  "hero_system": {
+    "rarity_tiers": {
+      "4_star": {
+        "gacha_rate": 0.06,
+        "pity_counter": 10,
+        "base_power": 100,
+        "max_level": 60
+      },
+      "5_star": {
+        "gacha_rate": 0.006,
+        "pity_counter": 90,
+        "base_power": 200,
+        "max_level": 80
+      },
+      "6_star": {
+        "gacha_rate": 0.003,
+        "pity_counter": 120,
+        "base_power": 400,
+        "max_level": 100
+      },
+      "7_star": {
+        "gacha_rate": 0,
+        "obtainable_through": "monthly_legendary_missions",
+        "base_power": 800,
+        "max_level": 120
+      }
+    },
+    "ascension_requirements": {
+      "4_star_to_5_star": {
+        "duplicates_needed": 3,
+        "special_materials": ["ascension_crystal_tier_1"]
+      },
+      "5_star_to_6_star": {
+        "duplicates_needed": 5,
+        "special_materials": ["ascension_crystal_tier_2", "hero_essence"]
+      },
+      "6_star_to_7_star": {
+        "duplicates_needed": 7,
+        "special_materials": ["ascension_crystal_tier_3", "legendary_essence", "transcendence_stone"]
+      }
+    }
+  },
+  "starter_heroes": [
+    {
+      "id": 1,
+      "name": "Aria the Forester",
+      "rarity": "4★",
+      "element": "nature",
+      "role": "wood_production_specialist",
+      "guaranteed": true,
+      "era_introduced": 1,
+      "abilities": {
+        "passive_1": {
+          "name": "Master Woodsman",
+          "effect": "+20% wood production from all sources"
+        },
+        "passive_2": {
+          "name": "Efficient Builder",
+          "effect": "-10% wood cost for all buildings"
+        },
+        "active": {
+          "name": "Forest's Blessing",
+          "cooldown_hours": 12,
+          "effect": "Double wood production for 2 hours"
+        }
+      },
+      "synergies": [
+        {
+          "with_hero": "Brock the Mason",
+          "bonus": "+5% all resource production"
+        }
+      ],
+      "lore": "A seasoned forester who knows the secrets of sustainable forestry. Her village thrived under her guidance."
+    },
+    {
+      "id": 2,
+      "name": "Brock the Mason",
+      "rarity": "4★",
+      "element": "earth",
+      "role": "stone_production_specialist",
+      "guaranteed": true,
+      "era_introduced": 1,
+      "abilities": {
+        "passive_1": {
+          "name": "Stonemason's Touch",
+          "effect": "+20% stone production from all sources"
+        },
+        "passive_2": {
+          "name": "Swift Builder",
+          "effect": "+15% construction speed for all buildings"
+        },
+        "active": {
+          "name": "Mountain's Endurance",
+          "cooldown_hours": 12,
+          "effect": "Complete one building instantly (max 6 hour build time)"
+        }
+      },
+      "synergies": [
+        {
+          "with_hero": "Aria the Forester",
+          "bonus": "+5% all resource production"
+        }
+      ],
+      "lore": "A master mason whose structures have withstood countless storms. His expertise is sought across the realm."
+    },
+    {
+      "id": 3,
+      "name": "Finn the Fisher",
+      "rarity": "4★",
+      "element": "water",
+      "role": "food_production_specialist",
+      "guaranteed": true,
+      "era_introduced": 1,
+      "abilities": {
+        "passive_1": {
+          "name": "Angler's Intuition",
+          "effect": "+30% food production from fishing sources"
+        },
+        "passive_2": {
+          "name": "Early Navigator",
+          "effect": "Unlock fishing boats 1 era early"
+        },
+        "active": {
+          "name": "Bountiful Catch",
+          "cooldown_hours": 12,
+          "effect": "Triple food production for 1 hour"
+        }
+      },
+      "synergies": [
+        {
+          "with_hero": "Yuki the Farmer",
+          "bonus": "+15% total food production"
+        }
+      ],
+      "lore": "A legendary fisherman who can read the tides like ancient texts. Never returns empty-handed."
+    }
+  ],
+  "era_2_heroes": [
+    {
+      "id": 4,
+      "name": "Elena the Architect",
+      "rarity": "4★",
+      "element": "light",
+      "role": "construction_specialist",
+      "era_introduced": 2,
+      "abilities": {
+        "passive_1": {
+          "name": "Master Planner",
+          "effect": "+15% construction speed for all buildings"
+        },
+        "passive_2": {
+          "name": "Cost Optimizer",
+          "effect": "-5% cost for all building construction"
+        },
+        "active": {
+          "name": "Architectural Genius",
+          "cooldown_hours": 24,
+          "effect": "+50% construction speed for 3 hours"
+        }
+      },
+      "synergies": [
+        {
+          "with_hero": "Marcus the Trader",
+          "bonus": "+10% gold from trade buildings"
+        }
+      ],
+      "lore": "A visionary architect whose designs blend beauty with functionality. Cities compete for her services."
+    },
+    {
+      "id": 5,
+      "name": "Marcus the Trader",
+      "rarity": "4★",
+      "element": "wind",
+      "role": "trade_specialist",
+      "era_introduced": 2,
+      "abilities": {
+        "passive_1": {
+          "name": "Shrewd Negotiator",
+          "effect": "+20% profits from all trade routes"
+        },
+        "passive_2": {
+          "name": "Express Routes",
+          "effect": "-25% trade route duration"
+        },
+        "active": {
+          "name": "Golden Opportunity",
+          "cooldown_hours": 18,
+          "effect": "Complete all active trades instantly with 2x profit"
+        }
+      },
+      "synergies": [
+        {
+          "with_hero": "Elena the Architect",
+          "bonus": "+10% gold from trade buildings"
+        },
+        {
+          "with_hero": "Admiral Katrina",
+          "bonus": "+20% sea trade profits"
+        }
+      ],
+      "lore": "A charismatic merchant prince whose trade network spans continents. Wealth follows in his wake."
+    },
+    {
+      "id": 6,
+      "name": "Yuki the Farmer",
+      "rarity": "4★",
+      "element": "nature",
+      "role": "food_production_specialist",
+      "era_introduced": 2,
+      "abilities": {
+        "passive_1": {
+          "name": "Green Thumb",
+          "effect": "+25% food production from farms"
+        },
+        "passive_2": {
+          "name": "Crop Rotation",
+          "effect": "Unlock advanced farming techniques early"
+        },
+        "active": {
+          "name": "Harvest Festival",
+          "cooldown_hours": 24,
+          "effect": "Instant harvest from all farms with +50% yield"
+        }
+      },
+      "synergies": [
+        {
+          "with_hero": "Finn the Fisher",
+          "bonus": "+15% total food production"
+        }
+      ],
+      "lore": "An agricultural genius who can coax life from the most barren soil. Her techniques feed thousands."
+    },
+    {
+      "id": 7,
+      "name": "Leonidas the Founder",
+      "rarity": "5★",
+      "element": "light",
+      "role": "economic_leader",
+      "limited_banner": true,
+      "era_introduced": 2,
+      "abilities": {
+        "passive_1": {
+          "name": "Golden Rule",
+          "effect": "+30% gold income from all sources"
+        },
+        "passive_2": {
+          "name": "Inspiring Presence",
+          "effect": "All buildings have +1 productivity radius"
+        },
+        "active": {
+          "name": "Golden Age",
+          "cooldown_hours": 24,
+          "effect": "2x all production for 1 hour"
+        },
+        "ultimate": {
+          "name": "Empire's Glory",
+          "cooldown_hours": 168,
+          "effect": "All citizens work at 3x efficiency for 6 hours, +100% happiness"
+        }
+      },
+      "synergies": [
+        {
+          "with_hero": "Marcus the Trader",
+          "bonus": "+25% gold income"
+        },
+        {
+          "with_hero": "Empress Aurelia",
+          "bonus": "+50% noble tax income"
+        }
+      ],
+      "lore": "The legendary founder of the first great empire. His wisdom shaped civilizations for millennia."
+    }
+  ],
+  "era_3_heroes": [
+    {
+      "id": 8,
+      "name": "Admiral Katrina",
+      "rarity": "5★",
+      "element": "water",
+      "role": "naval_specialist",
+      "era_introduced": 3,
+      "abilities": {
+        "passive_1": {
+          "name": "Master Navigator",
+          "effect": "+40% sea trade speed"
+        },
+        "passive_2": {
+          "name": "Expanded Docks",
+          "effect": "+25% harbor capacity"
+        },
+        "active": {
+          "name": "Favorable Winds",
+          "cooldown_hours": 12,
+          "effect": "All ships travel instantly for 30 minutes"
+        },
+        "ultimate": {
+          "name": "Armada's Might",
+          "cooldown_hours": 72,
+          "effect": "5x sea trade profits for 2 hours, immunity to pirate raids"
+        }
+      },
+      "synergies": [
+        {
+          "with_hero": "Marcus the Trader",
+          "bonus": "+20% sea trade profits"
+        }
+      ],
+      "lore": "An undefeated naval commander whose fleet controls the seven seas. Pirates flee at the sight of her flag."
+    },
+    {
+      "id": 9,
+      "name": "General Thorn",
+      "rarity": "5★",
+      "element": "fire",
+      "role": "defense_specialist",
+      "era_introduced": 3,
+      "abilities": {
+        "passive_1": {
+          "name": "Fortress Commander",
+          "effect": "+50% defense against all raids"
+        },
+        "passive_2": {
+          "name": "Rapid Mobilization",
+          "effect": "Barracks train units 40% faster"
+        },
+        "active": {
+          "name": "Defensive Stance",
+          "cooldown_hours": 24,
+          "effect": "Immunity to raids for 4 hours"
+        },
+        "ultimate": {
+          "name": "Counter-Offensive",
+          "cooldown_hours": 168,
+          "effect": "Raid attacking players back automatically, capture 50% of their resources"
+        }
+      },
+      "synergies": [
+        {
+          "with_hero": "Empress Aurelia",
+          "bonus": "+25% army strength"
+        }
+      ],
+      "lore": "A tactical genius who has never lost a defensive battle. His fortifications are legendary."
+    },
+    {
+      "id": 10,
+      "name": "Sage Aldric",
+      "rarity": "5★",
+      "element": "arcane",
+      "role": "research_specialist",
+      "era_introduced": 3,
+      "abilities": {
+        "passive_1": {
+          "name": "Ancient Wisdom",
+          "effect": "+35% research speed"
+        },
+        "passive_2": {
+          "name": "Scholarly Network",
+          "effect": "Unlock 3 exclusive technologies"
+        },
+        "active": {
+          "name": "Eureka Moment",
+          "cooldown_hours": 48,
+          "effect": "Complete one research instantly"
+        },
+        "ultimate": {
+          "name": "Age of Enlightenment",
+          "cooldown_hours": 168,
+          "effect": "All research free and instant for 12 hours"
+        }
+      },
+      "synergies": [
+        {
+          "with_hero": "Leonidas the Founder",
+          "bonus": "+15% all production"
+        }
+      ],
+      "lore": "A philosopher-scientist who unlocked the secrets of the universe. His discoveries changed everything."
+    }
+  ],
+  "era_4_heroes": [
+    {
+      "id": 11,
+      "name": "Empress Aurelia",
+      "rarity": "6★",
+      "element": "divine",
+      "role": "supreme_ruler",
+      "limited_banner": true,
+      "era_introduced": 4,
+      "abilities": {
+        "passive_1": {
+          "name": "Imperial Authority",
+          "effect": "+50% tax income from Nobles"
+        },
+        "passive_2": {
+          "name": "Golden Treasury",
+          "effect": "+30% gold from all sources"
+        },
+        "active": {
+          "name": "Royal Decree",
+          "cooldown_hours": 168,
+          "effect": "Complete any single building instantly (no time limit)"
+        },
+        "ultimate": {
+          "name": "Divine Right",
+          "cooldown_hours": 336,
+          "effect": "All production, research, and construction 10x speed for 1 hour"
+        }
+      },
+      "synergies": [
+        {
+          "with_hero": "Leonidas the Founder",
+          "bonus": "+50% noble tax income"
+        },
+        {
+          "with_hero": "General Thorn",
+          "bonus": "+25% army strength"
+        },
+        {
+          "with_hero": "Marcus the Trader",
+          "bonus": "+40% trade profits"
+        }
+      ],
+      "lore": "The immortal empress whose reign has lasted centuries. Nations rise and fall at her whim."
+    }
+  ],
+  "hero_acquisition": {
+    "summon_costs": {
+      "single_pull": {
+        "gems": 300,
+        "scrolls": 1
+      },
+      "10_pull": {
+        "gems": 2700,
+        "scrolls": 10,
+        "discount": 0.10,
+        "guaranteed_4_star": true
+      }
+    },
+    "free_acquisition_methods": [
+      "Daily login rewards (hero shards)",
+      "Alliance missions",
+      "Monthly legendary missions",
+      "Event participation",
+      "Achievement milestones",
+      "Season pass (free track)"
+    ],
+    "pity_system": {
+      "4_star_pity": 10,
+      "5_star_pity": 90,
+      "6_star_pity": 120,
+      "pity_carries_over": true,
+      "visible_counter": true
+    }
+  },
+  "hero_progression": {
+    "leveling": {
+      "experience_sources": [
+        "Assigning to buildings",
+        "Active time in city",
+        "Alliance activities",
+        "Experience potions (purchasable/earnable)"
+      ],
+      "level_cap_by_rarity": {
+        "4_star": 60,
+        "5_star": 80,
+        "6_star": 100,
+        "7_star": 120
+      }
+    },
+    "skill_upgrades": {
+      "skill_books_required": true,
+      "max_skill_level": 10,
+      "upgrade_cost_increases_per_level": 1.5
+    },
+    "equipment": {
+      "slots": ["weapon", "armor", "accessory", "mount"],
+      "rarity_tiers": ["common", "uncommon", "rare", "epic", "legendary"],
+      "obtainable_through": [
+        "Crafting",
+        "Events",
+        "Alliance wars",
+        "Gacha (equipment banners)"
+      ]
+    }
+  }
+}

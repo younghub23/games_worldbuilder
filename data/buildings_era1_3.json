@@ -1,0 +1,876 @@
+{
+  "building_database": {
+    "era_1_settlement_age": [
+      {
+        "id": 1,
+        "name": "Tent",
+        "category": "housing",
+        "era": 1,
+        "capacity": 5,
+        "cost": {
+          "wood": 10
+        },
+        "construction_time_minutes": 30,
+        "needs": ["food", "water"],
+        "tax_income_per_minute": 0.05,
+        "upgradeable": true
+      },
+      {
+        "id": 2,
+        "name": "Forester's Hut",
+        "category": "production",
+        "era": 1,
+        "produces": "wood",
+        "production_rate": "2 per minute",
+        "workers_required": 2,
+        "cost": {
+          "wood": 20,
+          "stone": 10
+        },
+        "construction_time_minutes": 45,
+        "upgradeable": true
+      },
+      {
+        "id": 3,
+        "name": "Quarry",
+        "category": "production",
+        "era": 1,
+        "produces": "stone",
+        "production_rate": "1.5 per minute",
+        "workers_required": 3,
+        "cost": {
+          "wood": 30
+        },
+        "construction_time_minutes": 60,
+        "upgradeable": true
+      },
+      {
+        "id": 4,
+        "name": "Fishing Hut",
+        "category": "production",
+        "era": 1,
+        "produces": "fish",
+        "production_rate": "3 per minute",
+        "workers_required": 2,
+        "cost": {
+          "wood": 25,
+          "stone": 5
+        },
+        "construction_time_minutes": 40,
+        "upgradeable": true
+      },
+      {
+        "id": 5,
+        "name": "Campfire",
+        "category": "happiness",
+        "era": 1,
+        "happiness_bonus": 5,
+        "radius": 3,
+        "cost": {
+          "wood": 15
+        },
+        "construction_time_minutes": 20,
+        "upgradeable": false
+      },
+      {
+        "id": 6,
+        "name": "Warehouse",
+        "category": "storage",
+        "era": 1,
+        "storage_capacity": 1000,
+        "cost": {
+          "wood": 50,
+          "stone": 30
+        },
+        "construction_time_minutes": 90,
+        "upgradeable": true
+      },
+      {
+        "id": 7,
+        "name": "Market Stall",
+        "category": "trade",
+        "era": 1,
+        "enables": "basic_trade",
+        "trade_routes": 1,
+        "cost": {
+          "wood": 40,
+          "stone": 20
+        },
+        "construction_time_minutes": 60,
+        "upgradeable": true
+      },
+      {
+        "id": 8,
+        "name": "Dirt Road",
+        "category": "infrastructure",
+        "era": 1,
+        "movement_speed_bonus": 0.20,
+        "cost": {
+          "wood": 5
+        },
+        "construction_time_minutes": 10,
+        "upgradeable": true
+      },
+      {
+        "id": 9,
+        "name": "Well",
+        "category": "service",
+        "era": 1,
+        "provides": "water",
+        "happiness_bonus": 3,
+        "radius": 4,
+        "cost": {
+          "stone": 50
+        },
+        "construction_time_minutes": 120,
+        "upgradeable": true
+      },
+      {
+        "id": 10,
+        "name": "Gathering Post",
+        "category": "utility",
+        "era": 1,
+        "auto_collects_from": 5,
+        "collection_radius": 6,
+        "cost": {
+          "wood": 60,
+          "stone": 40
+        },
+        "construction_time_minutes": 90,
+        "upgradeable": true
+      },
+      {
+        "id": 11,
+        "name": "Scout Tower",
+        "category": "utility",
+        "era": 1,
+        "reveals_fog_of_war": true,
+        "vision_radius": 10,
+        "cost": {
+          "wood": 80,
+          "stone": 60
+        },
+        "construction_time_minutes": 150,
+        "upgradeable": true
+      },
+      {
+        "id": 12,
+        "name": "Chieftain's Tent",
+        "category": "special",
+        "era": 1,
+        "required_for_era_progression": true,
+        "unlocks": "era_2",
+        "cost": {
+          "wood": 100,
+          "stone": 100,
+          "gold": 500
+        },
+        "construction_time_minutes": 240,
+        "upgradeable": true
+      }
+    ],
+    "era_2_village_age": [
+      {
+        "id": 13,
+        "name": "Logging Camp",
+        "category": "production",
+        "era": 2,
+        "produces": "wood_planks",
+        "production_rate": "1 per minute",
+        "workers_required": 3,
+        "requires_building": "Tool Maker",
+        "cost": {
+          "wood": 100,
+          "stone": 50
+        },
+        "construction_time_minutes": 120,
+        "upgradeable": true
+      },
+      {
+        "id": 14,
+        "name": "Tool Maker",
+        "category": "production",
+        "era": 2,
+        "produces": "tools",
+        "production_rate": "0.5 per minute",
+        "input_resources": {
+          "wood": 2,
+          "stone": 1
+        },
+        "workers_required": 2,
+        "cost": {
+          "wood": 120,
+          "stone": 80
+        },
+        "construction_time_minutes": 150,
+        "upgradeable": true
+      },
+      {
+        "id": 15,
+        "name": "Clay Pit",
+        "category": "production",
+        "era": 2,
+        "produces": "clay",
+        "production_rate": "2 per minute",
+        "workers_required": 3,
+        "cost": {
+          "wood": 80,
+          "stone": 40
+        },
+        "construction_time_minutes": 90,
+        "upgradeable": true
+      },
+      {
+        "id": 16,
+        "name": "Brick Maker",
+        "category": "production",
+        "era": 2,
+        "produces": "bricks",
+        "production_rate": "1 per minute",
+        "input_resources": {
+          "clay": 3
+        },
+        "workers_required": 2,
+        "cost": {
+          "wood": 100,
+          "stone": 60
+        },
+        "construction_time_minutes": 120,
+        "upgradeable": true
+      },
+      {
+        "id": 17,
+        "name": "Bakery",
+        "category": "production",
+        "era": 2,
+        "produces": "bread",
+        "production_rate": "2 per minute",
+        "input_resources": {
+          "fish": 1,
+          "grain": 2
+        },
+        "workers_required": 2,
+        "cost": {
+          "wood": 150,
+          "bricks": 50
+        },
+        "construction_time_minutes": 180,
+        "upgradeable": true
+      },
+      {
+        "id": 18,
+        "name": "Farm",
+        "category": "production",
+        "era": 2,
+        "produces": "grain",
+        "production_rate": "3 per minute",
+        "workers_required": 4,
+        "cost": {
+          "wood": 200,
+          "tools": 10
+        },
+        "construction_time_minutes": 240,
+        "upgradeable": true
+      },
+      {
+        "id": 19,
+        "name": "Wooden House",
+        "category": "housing",
+        "era": 2,
+        "capacity": 15,
+        "population_class": "settlers",
+        "needs": ["bread", "wood_planks"],
+        "tax_income_per_minute": 0.15,
+        "cost": {
+          "wood": 200,
+          "bricks": 100
+        },
+        "construction_time_minutes": 180,
+        "upgradeable": true
+      },
+      {
+        "id": 20,
+        "name": "Cottage",
+        "category": "housing",
+        "era": 2,
+        "capacity": 20,
+        "population_class": "settlers",
+        "needs": ["bread", "clothing"],
+        "tax_income_per_minute": 0.20,
+        "cost": {
+          "wood": 250,
+          "bricks": 150
+        },
+        "construction_time_minutes": 240,
+        "upgradeable": true
+      },
+      {
+        "id": 21,
+        "name": "Weaving Hut",
+        "category": "production",
+        "era": 2,
+        "produces": "clothing",
+        "production_rate": "1 per minute",
+        "input_resources": {
+          "animal_skins": 2
+        },
+        "workers_required": 2,
+        "cost": {
+          "wood": 180,
+          "tools": 15
+        },
+        "construction_time_minutes": 180,
+        "upgradeable": true
+      },
+      {
+        "id": 22,
+        "name": "Hunting Lodge",
+        "category": "production",
+        "era": 2,
+        "produces": "animal_skins",
+        "production_rate": "1.5 per minute",
+        "workers_required": 3,
+        "cost": {
+          "wood": 150,
+          "stone": 50
+        },
+        "construction_time_minutes": 150,
+        "upgradeable": true
+      },
+      {
+        "id": 23,
+        "name": "Wooden Road",
+        "category": "infrastructure",
+        "era": 2,
+        "movement_speed_bonus": 0.40,
+        "cost": {
+          "wood": 15,
+          "stone": 5
+        },
+        "construction_time_minutes": 15,
+        "upgradeable": true
+      },
+      {
+        "id": 24,
+        "name": "Small Harbor",
+        "category": "trade",
+        "era": 2,
+        "enables": "sea_trade",
+        "trade_routes": 1,
+        "cost": {
+          "wood": 300,
+          "stone": 200,
+          "tools": 20
+        },
+        "construction_time_minutes": 360,
+        "upgradeable": true
+      },
+      {
+        "id": 25,
+        "name": "Watchtower",
+        "category": "defense",
+        "era": 2,
+        "defense_bonus": 10,
+        "vision_radius": 15,
+        "cost": {
+          "wood": 200,
+          "stone": 150
+        },
+        "construction_time_minutes": 240,
+        "upgradeable": true
+      },
+      {
+        "id": 26,
+        "name": "Town Square",
+        "category": "service",
+        "era": 2,
+        "happiness_bonus": 10,
+        "radius": 6,
+        "enables": "town_events",
+        "cost": {
+          "wood": 300,
+          "bricks": 200,
+          "gold": 1000
+        },
+        "construction_time_minutes": 360,
+        "upgradeable": true
+      },
+      {
+        "id": 27,
+        "name": "Healer's Hut",
+        "category": "service",
+        "era": 2,
+        "population_growth_bonus": 0.20,
+        "radius": 5,
+        "cost": {
+          "wood": 250,
+          "stone": 100
+        },
+        "construction_time_minutes": 240,
+        "upgradeable": true
+      },
+      {
+        "id": 28,
+        "name": "Shrine",
+        "category": "service",
+        "era": 2,
+        "happiness_bonus": 8,
+        "radius": 5,
+        "unlocks": "blessings",
+        "cost": {
+          "wood": 200,
+          "stone": 200,
+          "gold": 500
+        },
+        "construction_time_minutes": 300,
+        "upgradeable": true
+      },
+      {
+        "id": 29,
+        "name": "Flower Garden",
+        "category": "decorative",
+        "era": 2,
+        "happiness_bonus": 2,
+        "radius": 2,
+        "cost": {
+          "wood": 50,
+          "gold": 100
+        },
+        "construction_time_minutes": 60,
+        "upgradeable": false
+      },
+      {
+        "id": 30,
+        "name": "Statue of Founders",
+        "category": "decorative",
+        "era": 2,
+        "prestige_bonus": 5,
+        "happiness_bonus": 5,
+        "cost": {
+          "stone": 300,
+          "gold": 2000
+        },
+        "construction_time_minutes": 480,
+        "upgradeable": false
+      }
+    ],
+    "era_3_township_age": [
+      {
+        "id": 31,
+        "name": "Ore Mine",
+        "category": "production",
+        "era": 3,
+        "produces": "iron_ore",
+        "production_rate": "1 per minute",
+        "workers_required": 5,
+        "cost": {
+          "wood": 400,
+          "stone": 300,
+          "tools": 50
+        },
+        "construction_time_minutes": 480,
+        "upgradeable": true
+      },
+      {
+        "id": 32,
+        "name": "Smelter",
+        "category": "production",
+        "era": 3,
+        "produces": "iron_bars",
+        "production_rate": "0.5 per minute",
+        "input_resources": {
+          "iron_ore": 3
+        },
+        "workers_required": 3,
+        "cost": {
+          "wood": 300,
+          "bricks": 400
+        },
+        "construction_time_minutes": 420,
+        "upgradeable": true
+      },
+      {
+        "id": 33,
+        "name": "Blacksmith",
+        "category": "production",
+        "era": 3,
+        "produces": "weapons",
+        "production_rate": "0.3 per minute",
+        "input_resources": {
+          "iron_bars": 2,
+          "wood": 1
+        },
+        "workers_required": 2,
+        "cost": {
+          "wood": 350,
+          "stone": 200,
+          "iron_bars": 50
+        },
+        "construction_time_minutes": 480,
+        "upgradeable": true
+      },
+      {
+        "id": 34,
+        "name": "Vineyard",
+        "category": "production",
+        "era": 3,
+        "produces": "grapes",
+        "production_rate": "2 per minute",
+        "workers_required": 4,
+        "cost": {
+          "wood": 300,
+          "tools": 30
+        },
+        "construction_time_minutes": 360,
+        "upgradeable": true
+      },
+      {
+        "id": 35,
+        "name": "Winery",
+        "category": "production",
+        "era": 3,
+        "produces": "wine",
+        "production_rate": "0.5 per minute",
+        "input_resources": {
+          "grapes": 5
+        },
+        "workers_required": 2,
+        "cost": {
+          "wood": 400,
+          "bricks": 300
+        },
+        "construction_time_minutes": 480,
+        "upgradeable": true
+      },
+      {
+        "id": 36,
+        "name": "Apiary",
+        "category": "production",
+        "era": 3,
+        "produces": "honey",
+        "production_rate": "1 per minute",
+        "workers_required": 2,
+        "cost": {
+          "wood": 250,
+          "tools": 20
+        },
+        "construction_time_minutes": 300,
+        "upgradeable": true
+      },
+      {
+        "id": 37,
+        "name": "Candlemaker",
+        "category": "production",
+        "era": 3,
+        "produces": "candles",
+        "production_rate": "1 per minute",
+        "input_resources": {
+          "honey": 1,
+          "wax": 1
+        },
+        "workers_required": 2,
+        "cost": {
+          "wood": 300,
+          "bricks": 200
+        },
+        "construction_time_minutes": 360,
+        "upgradeable": true
+      },
+      {
+        "id": 38,
+        "name": "Townhouse",
+        "category": "housing",
+        "era": 3,
+        "capacity": 30,
+        "population_class": "citizens",
+        "needs": ["bread", "clothing", "candles"],
+        "tax_income_per_minute": 0.40,
+        "cost": {
+          "wood": 500,
+          "bricks": 400,
+          "iron_bars": 50
+        },
+        "construction_time_minutes": 480,
+        "upgradeable": true
+      },
+      {
+        "id": 39,
+        "name": "Villa",
+        "category": "housing",
+        "era": 3,
+        "capacity": 50,
+        "population_class": "citizens",
+        "needs": ["bread", "wine", "entertainment"],
+        "tax_income_per_minute": 0.60,
+        "cost": {
+          "wood": 700,
+          "bricks": 600,
+          "iron_bars": 100
+        },
+        "construction_time_minutes": 600,
+        "upgradeable": true
+      },
+      {
+        "id": 40,
+        "name": "Stone Road",
+        "category": "infrastructure",
+        "era": 3,
+        "movement_speed_bonus": 0.60,
+        "cost": {
+          "stone": 30,
+          "bricks": 10
+        },
+        "construction_time_minutes": 20,
+        "upgradeable": true
+      },
+      {
+        "id": 41,
+        "name": "Medium Harbor",
+        "category": "trade",
+        "era": 3,
+        "trade_routes": 2,
+        "trade_speed_bonus": 0.20,
+        "cost": {
+          "wood": 600,
+          "stone": 500,
+          "iron_bars": 100
+        },
+        "construction_time_minutes": 600,
+        "upgradeable": true
+      },
+      {
+        "id": 42,
+        "name": "Tavern",
+        "category": "service",
+        "era": 3,
+        "happiness_bonus": 12,
+        "radius": 6,
+        "generates": "gossip_news",
+        "cost": {
+          "wood": 500,
+          "bricks": 300
+        },
+        "construction_time_minutes": 480,
+        "upgradeable": true
+      },
+      {
+        "id": 43,
+        "name": "Theater",
+        "category": "service",
+        "era": 3,
+        "entertainment_bonus": 15,
+        "radius": 8,
+        "cost": {
+          "wood": 700,
+          "bricks": 500,
+          "gold": 3000
+        },
+        "construction_time_minutes": 720,
+        "upgradeable": true
+      },
+      {
+        "id": 44,
+        "name": "Hospital",
+        "category": "service",
+        "era": 3,
+        "population_growth_bonus": 0.40,
+        "disaster_damage_reduction": 0.30,
+        "radius": 10,
+        "cost": {
+          "wood": 800,
+          "bricks": 600,
+          "tools": 50
+        },
+        "construction_time_minutes": 720,
+        "upgradeable": true
+      },
+      {
+        "id": 45,
+        "name": "Barracks",
+        "category": "defense",
+        "era": 3,
+        "trains": "defensive_units",
+        "unit_production_rate": "1 per 5 minutes",
+        "cost": {
+          "wood": 600,
+          "stone": 500,
+          "iron_bars": 100
+        },
+        "construction_time_minutes": 600,
+        "upgradeable": true
+      },
+      {
+        "id": 46,
+        "name": "Armory",
+        "category": "defense",
+        "era": 3,
+        "stores": "weapons",
+        "defense_bonus": 20,
+        "cost": {
+          "wood": 500,
+          "stone": 400,
+          "iron_bars": 150
+        },
+        "construction_time_minutes": 600,
+        "upgradeable": true
+      },
+      {
+        "id": 47,
+        "name": "City Wall Section",
+        "category": "defense",
+        "era": 3,
+        "raid_damage_reduction": 0.25,
+        "cost": {
+          "stone": 500,
+          "bricks": 300
+        },
+        "construction_time_minutes": 480,
+        "upgradeable": true
+      },
+      {
+        "id": 48,
+        "name": "Ballista Tower",
+        "category": "defense",
+        "era": 3,
+        "active_defense": true,
+        "attack_power": 50,
+        "cost": {
+          "wood": 400,
+          "stone": 400,
+          "iron_bars": 100,
+          "weapons": 20
+        },
+        "construction_time_minutes": 600,
+        "upgradeable": true
+      },
+      {
+        "id": 49,
+        "name": "Inventor's Workshop",
+        "category": "special",
+        "era": 3,
+        "unlocks": "special_projects",
+        "research_speed_bonus": 0.15,
+        "cost": {
+          "wood": 700,
+          "bricks": 600,
+          "iron_bars": 200,
+          "gold": 5000
+        },
+        "construction_time_minutes": 720,
+        "upgradeable": true
+      },
+      {
+        "id": 50,
+        "name": "Library",
+        "category": "research",
+        "era": 3,
+        "research_slots": 3,
+        "passive_bonuses": true,
+        "cost": {
+          "wood": 800,
+          "bricks": 700,
+          "gold": 7000
+        },
+        "construction_time_minutes": 840,
+        "upgradeable": true
+      },
+      {
+        "id": 51,
+        "name": "Town Hall",
+        "category": "special",
+        "era": 3,
+        "required_for_era_progression": true,
+        "unlocks": "era_4",
+        "upgrade_of": "Chieftain's Tent",
+        "cost": {
+          "wood": 1000,
+          "bricks": 1000,
+          "iron_bars": 500,
+          "gold": 10000
+        },
+        "construction_time_minutes": 1200,
+        "upgradeable": true
+      },
+      {
+        "id": 52,
+        "name": "Ancient Fountain",
+        "category": "legendary",
+        "era": 3,
+        "rarity": "5★",
+        "gacha_exclusive": true,
+        "happiness_bonus": 25,
+        "water_production_bonus": 2.0,
+        "cost": {
+          "gold": 20000
+        },
+        "construction_time_minutes": 1440,
+        "upgradeable": false
+      },
+      {
+        "id": 53,
+        "name": "Sacred Grove",
+        "category": "legendary",
+        "era": 3,
+        "rarity": "5★",
+        "gacha_exclusive": true,
+        "all_resources_bonus": 0.10,
+        "radius": 12,
+        "cost": {
+          "gold": 20000
+        },
+        "construction_time_minutes": 1440,
+        "upgradeable": false
+      },
+      {
+        "id": 54,
+        "name": "Master Sculptor's Studio",
+        "category": "legendary",
+        "era": 3,
+        "rarity": "5★",
+        "gacha_exclusive": true,
+        "generates": "prestige_currency",
+        "prestige_per_hour": 10,
+        "cost": {
+          "gold": 20000
+        },
+        "construction_time_minutes": 1440,
+        "upgradeable": false
+      },
+      {
+        "id": 55,
+        "name": "Mythical Stable",
+        "category": "legendary",
+        "era": 3,
+        "rarity": "5★",
+        "gacha_exclusive": true,
+        "unlocks": "mount_based_trade_routes",
+        "trade_speed_bonus": 0.50,
+        "cost": {
+          "gold": 20000
+        },
+        "construction_time_minutes": 1440,
+        "upgradeable": false
+      }
+    ]
+  },
+  "building_categories": {
+    "housing": "Provides population capacity and generates tax income",
+    "production": "Produces resources, may require input resources",
+    "storage": "Increases resource storage capacity",
+    "trade": "Enables and enhances trading capabilities",
+    "infrastructure": "Roads and connectivity improvements",
+    "service": "Provides benefits to nearby population",
+    "defense": "Protection against raids and attacks",
+    "utility": "Special functions like auto-collection",
+    "research": "Unlocks technologies and bonuses",
+    "decorative": "Cosmetic buildings that provide happiness/prestige",
+    "legendary": "Rare gacha-exclusive buildings with powerful effects",
+    "special": "Unique buildings required for progression"
+  },
+  "upgrade_mechanics": {
+    "max_upgrade_level": 5,
+    "cost_increase_per_level": 1.5,
+    "production_increase_per_level": 1.25,
+    "construction_time_increase_per_level": 1.3
+  }
+}

@@ -1,0 +1,500 @@
+{
+  "currency_system": {
+    "soft_currency": {
+      "name": "Gold",
+      "icon": "coin",
+      "earning_methods": [
+        "Population taxes",
+        "Trading",
+        "Quests and missions",
+        "Alliance rewards"
+      ],
+      "primary_uses": [
+        "Building construction",
+        "Upgrades",
+        "Instant trades",
+        "Resource purchases"
+      ],
+      "conversion": {
+        "to_gems": {
+          "rate": "100 gold = 1 gem",
+          "one_way_only": true,
+          "prevents": "inflation"
+        }
+      }
+    },
+    "premium_currency": {
+      "name": "Gems",
+      "icon": "diamond",
+      "earning_methods": [
+        "Daily login (50 per day)",
+        "Achievements",
+        "Events",
+        "Leveling up",
+        "First-time building completion bonuses"
+      ],
+      "purchase_tiers": [
+        {
+          "amount": 100,
+          "price_usd": 0.99,
+          "first_time_bonus": 500
+        },
+        {
+          "amount": 550,
+          "price_usd": 4.99,
+          "bonus_percentage": 10,
+          "first_time_bonus": 2750
+        },
+        {
+          "amount": 1200,
+          "price_usd": 9.99,
+          "bonus_percentage": 20,
+          "first_time_bonus": 6000
+        },
+        {
+          "amount": 3000,
+          "price_usd": 24.99,
+          "bonus_percentage": 20,
+          "first_time_bonus": 15000
+        },
+        {
+          "amount": 6500,
+          "price_usd": 49.99,
+          "bonus_percentage": 30,
+          "first_time_bonus": 32500
+        },
+        {
+          "amount": 12000,
+          "price_usd": 99.99,
+          "bonus_percentage": 20,
+          "best_value": true,
+          "first_time_bonus": 60000
+        }
+      ],
+      "primary_uses": [
+        "Speed-ups",
+        "Hero gacha pulls",
+        "Special buildings",
+        "Resource bundles"
+      ]
+    },
+    "gacha_currency": {
+      "name": "Summon Scrolls",
+      "icon": "scroll",
+      "earning_methods": [
+        "Alliance weekly rewards",
+        "Special events",
+        "Season pass",
+        "Monthly mission completion"
+      ],
+      "purchase_options": [
+        {
+          "amount": 1,
+          "price_usd": 0.99
+        },
+        {
+          "amount": 10,
+          "price_usd": 9.99,
+          "includes": "10% discount"
+        },
+        {
+          "amount": 50,
+          "price_usd": 44.99,
+          "includes": "10% discount + bonus hero shard"
+        }
+      ],
+      "exclusive_use": "Hero and blueprint gacha only",
+      "not_convertible": true
+    },
+    "prestige_currency": {
+      "name": "Prestige Points",
+      "icon": "crown",
+      "earning_methods": [
+        "City beauty contests",
+        "Achievements",
+        "Legendary building sets",
+        "Alliance rankings"
+      ],
+      "cannot_be_purchased": true,
+      "exclusive_uses": [
+        "Cosmetic buildings",
+        "City themes",
+        "Exclusive decorations",
+        "Prestige titles"
+      ]
+    }
+  },
+  "subscription_packages": {
+    "builders_subscription": {
+      "name": "Builder's Blessing",
+      "price_monthly_usd": 4.99,
+      "benefits": [
+        "+50% offline production",
+        "1 free hero pull daily",
+        "Exclusive builder hero (first month)",
+        "+5% construction speed",
+        "VIP icon and badge"
+      ],
+      "target_audience": "minnows",
+      "expected_conversion": 0.08
+    },
+    "season_pass_basic": {
+      "name": "Season Pass",
+      "price_monthly_usd": 9.99,
+      "benefits": [
+        "2x better rewards than direct gem purchases",
+        "Exclusive cosmetic building skins",
+        "1500 gems over 30 days (50/day)",
+        "+1 building queue slot",
+        "Exclusive season hero at tier 30"
+      ],
+      "free_track": {
+        "available": true,
+        "shows_premium_rewards": true,
+        "encourages_upgrade": true
+      },
+      "target_audience": "minnows_and_dolphins",
+      "expected_conversion": 0.05
+    },
+    "season_pass_premium": {
+      "name": "Season Pass Premium+",
+      "price_monthly_usd": 19.99,
+      "benefits": [
+        "All Season Pass benefits",
+        "3x rewards instead of 2x",
+        "Exclusive legendary building skin",
+        "Instant tier 15 unlock",
+        "+1 additional building queue slot (total +2)",
+        "Exclusive chat frame and emotes"
+      ],
+      "target_audience": "dolphins",
+      "expected_conversion": 0.015
+    },
+    "legendary_builder_pass": {
+      "name": "Legendary Builder Pass",
+      "price_monthly_usd": 29.99,
+      "era_required": 5,
+      "benefits": [
+        "All previous pass benefits",
+        "Daily 6★ hero shard (30/month = guaranteed 6★)",
+        "Exclusive legendary building each month",
+        "+2 building queue slots (total 5 slots)",
+        "50% faster research speed",
+        "Exclusive mount cosmetics",
+        "Priority customer support"
+      ],
+      "target_audience": "whales",
+      "expected_conversion": 0.005
+    }
+  },
+  "one_time_purchases": {
+    "starter_pack": {
+      "name": "Starter Builder Pack",
+      "price_usd": 4.99,
+      "available": "first 7 days only",
+      "contents": [
+        "500 gems",
+        "1 guaranteed 4★ hero pull",
+        "7-day +50% all production boost",
+        "10x 1-hour speed-ups",
+        "5000 of each basic resource"
+      ],
+      "conversion_rate_if_offered_within_3hrs": 0.50,
+      "target_audience": "new_players"
+    },
+    "permanent_upgrades": [
+      {
+        "name": "Extra Building Queue Slot",
+        "price_usd": 9.99,
+        "benefit": "Permanent +1 building queue (max 3 from purchases)",
+        "stackable": true,
+        "max_purchases": 3
+      },
+      {
+        "name": "Master Architect's Toolkit",
+        "price_usd": 14.99,
+        "benefit": "Permanent +10% construction speed",
+        "one_time_only": true
+      },
+      {
+        "name": "Merchant's License",
+        "price_usd": 19.99,
+        "benefit": "Permanent +20% trade profits",
+        "one_time_only": true
+      },
+      {
+        "name": "Expanded Vault",
+        "price_usd": 4.99,
+        "benefit": "+50% resource storage capacity",
+        "stackable": true,
+        "max_purchases": 5
+      }
+    ]
+  },
+  "daily_deals": {
+    "rotation_frequency": "24 hours",
+    "deal_types": [
+      {
+        "name": "Resource Bundle",
+        "price_usd": 1.99,
+        "contents": "2 hours worth of all resources",
+        "frequency": "appears 3x per week"
+      },
+      {
+        "name": "Speed-Up Pack",
+        "price_usd": 4.99,
+        "contents": "10x 1-hour speed-ups",
+        "frequency": "appears 2x per week"
+      },
+      {
+        "name": "Hero Shard Bundle",
+        "price_usd": 9.99,
+        "contents": "50 random hero shards + 5 summon scrolls",
+        "frequency": "appears 1x per week"
+      },
+      {
+        "name": "Insane Value Deal",
+        "price_usd": 0.99,
+        "contents": "200 gems + 5 speed-ups (5x normal value)",
+        "frequency": "appears 1x per week",
+        "purpose": "FOMO without punishment"
+      }
+    ]
+  },
+  "vip_system": {
+    "points_conversion": "1 point per $1 spent",
+    "levels": [
+      {
+        "level": 1,
+        "points_required": 10,
+        "benefits": [
+          "+5% all production",
+          "VIP chat badge"
+        ]
+      },
+      {
+        "level": 2,
+        "points_required": 30,
+        "benefits": [
+          "+7% all production",
+          "Daily free speed-up (1 hour)"
+        ]
+      },
+      {
+        "level": 3,
+        "points_required": 50,
+        "benefits": [
+          "+10% all production",
+          "+1 building queue slot",
+          "VIP-only chat channel"
+        ]
+      },
+      {
+        "level": 4,
+        "points_required": 75,
+        "benefits": [
+          "+12% all production",
+          "Daily resource bundle"
+        ]
+      },
+      {
+        "level": 5,
+        "points_required": 100,
+        "benefits": [
+          "+15% all production",
+          "Daily 10-pull ticket (hero gacha)",
+          "Exclusive VIP building skin"
+        ]
+      },
+      {
+        "level": 6,
+        "points_required": 150,
+        "benefits": [
+          "+18% all production",
+          "+1 building queue slot (total +2)"
+        ]
+      },
+      {
+        "level": 7,
+        "points_required": 250,
+        "benefits": [
+          "+20% all production",
+          "Access to exclusive VIP-only heroes",
+          "Weekly 6★ hero shard"
+        ]
+      },
+      {
+        "level": 8,
+        "points_required": 350,
+        "benefits": [
+          "+25% all production",
+          "Free season pass (permanent)"
+        ]
+      },
+      {
+        "level": 9,
+        "points_required": 450,
+        "benefits": [
+          "+30% all production",
+          "+1 building queue slot (total +3)"
+        ]
+      },
+      {
+        "level": 10,
+        "points_required": 500,
+        "benefits": [
+          "+40% all production",
+          "Permanent 2x offline income",
+          "Exclusive VIP 10 city theme",
+          "Personal VIP manager",
+          "Name in game credits"
+        ]
+      }
+    ]
+  },
+  "whale_exclusive_offerings": {
+    "monthly_vip_chest": {
+      "name": "Emperor's Treasure Chest",
+      "price_usd": 99.99,
+      "frequency": "monthly",
+      "contents": [
+        "6★ hero selector (choose any available 6★)",
+        "3x legendary building blueprints",
+        "10,000 gems",
+        "100 summon scrolls",
+        "Exclusive legendary city monument"
+      ],
+      "target_audience": "whales"
+    },
+    "limited_edition_skins": {
+      "name": "Limited Edition City Theme",
+      "price_usd": 49.99,
+      "frequency": "monthly rotation",
+      "purely_cosmetic": true,
+      "prestige_value": "high",
+      "examples": [
+        "Golden Palace Theme",
+        "Cyberpunk Neon Theme",
+        "Ancient Dragon Theme",
+        "Celestial Heaven Theme"
+      ]
+    },
+    "vanity_options": {
+      "name_building": {
+        "price_usd": 29.99,
+        "benefit": "Name one building after yourself (visible to visitors)",
+        "fun_factor": "high"
+      },
+      "custom_city_flag": {
+        "price_usd": 19.99,
+        "benefit": "Upload custom flag design (moderated)",
+        "visibility": "all visitors"
+      }
+    }
+  },
+  "ethical_boundaries": {
+    "never_implement": [
+      "Loot boxes with unknown odds",
+      "Exclusive gameplay content behind paywalls",
+      "Expiring limited-time content (FOMO manipulation)",
+      "Deliberate 'pain points' to frustrate into purchasing",
+      "Interruptive ads during gameplay"
+    ],
+    "always_implement": [
+      "Transparent odds (exact percentages displayed)",
+      "Pity systems (guaranteed rewards)",
+      "Free path to all gameplay content",
+      "Generous free currency distribution",
+      "Respect for player time"
+    ]
+  },
+  "revenue_projections": {
+    "player_spending_distribution": {
+      "free_players": {
+        "percentage": 0.90,
+        "monthly_spend": 0,
+        "value_to_game": "Community, content, competition"
+      },
+      "minnows": {
+        "percentage": 0.08,
+        "monthly_spend_range": {
+          "min": 5,
+          "max": 20
+        },
+        "average_monthly_spend": 10,
+        "primary_purchases": [
+          "Season pass",
+          "Builder's subscription",
+          "Small gem packs"
+        ]
+      },
+      "dolphins": {
+        "percentage": 0.015,
+        "monthly_spend_range": {
+          "min": 50,
+          "max": 100
+        },
+        "average_monthly_spend": 75,
+        "primary_purchases": [
+          "Multiple subscriptions",
+          "Medium gem packs",
+          "Hero gacha",
+          "Cosmetics"
+        ]
+      },
+      "whales": {
+        "percentage": 0.005,
+        "monthly_spend_range": {
+          "min": 500,
+          "max": "unlimited"
+        },
+        "average_monthly_spend": 800,
+        "primary_purchases": [
+          "All subscriptions",
+          "Large gem packs",
+          "VIP chests",
+          "Exclusive cosmetics",
+          "Vanity items"
+        ]
+      }
+    },
+    "expected_arpu_by_scenario": {
+      "modest_success": {
+        "arpu": 2,
+        "arppu": 25,
+        "conversion_rate": 0.03
+      },
+      "moderate_success": {
+        "arpu": 3.5,
+        "arppu": 50,
+        "conversion_rate": 0.035
+      },
+      "strong_success": {
+        "arpu": 5,
+        "arppu": 75,
+        "conversion_rate": 0.04
+      }
+    }
+  },
+  "first_purchase_psychology": {
+    "strategies": {
+      "first_time_buyer_bonus": {
+        "multiplier": 5,
+        "applies_to": "Any first purchase",
+        "psychological_effect": "Breaks the 'seal' of becoming a paying player",
+        "conversion_lift": "70% of first-time buyers become repeat customers"
+      },
+      "time_limited_starter_pack": {
+        "available_days": 7,
+        "discount_percentage": 80,
+        "creates_urgency": true,
+        "conversion_rate": 0.50
+      },
+      "progressive_offers": {
+        "description": "Offers get better as player progresses",
+        "example": "Era 1: $4.99 starter pack → Era 3: $14.99 growth pack → Era 5: $29.99 power pack",
+        "maintains_engagement": true
+      }
+    }
+  }
+}

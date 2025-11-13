@@ -1,0 +1,308 @@
+{
+  "game_title": "Empire Genesis",
+  "total_eras": 10,
+  "eras": {
+    "era_1": {
+      "id": 1,
+      "name": "Settlement Age",
+      "duration_days": {
+        "min": 1,
+        "max": 7
+      },
+      "description": "Tutorial phase focusing on basic resource gathering and city fundamentals",
+      "total_buildings": 12,
+      "new_buildings": 12,
+      "resources_introduced": ["Wood", "Stone", "Food", "Water", "Gold"],
+      "population_classes": ["Pioneers"],
+      "population_target": 50,
+      "hero_pool_size": 3,
+      "hero_rarities": ["4★"],
+      "key_features": [
+        "Basic resource gathering",
+        "Simple production chains",
+        "Population growth fundamentals",
+        "First guaranteed gacha pull"
+      ],
+      "era_goals": [
+        "Reach 50 population",
+        "Build all 12 building types",
+        "Generate 1,000 gold",
+        "Complete 5 trade missions"
+      ],
+      "first_iap_offer": {
+        "name": "Starter Builder Pack",
+        "price": 4.99,
+        "contents": [
+          "500 gems",
+          "1 additional 4★ hero pull",
+          "7-day resource boost (+50%)"
+        ],
+        "conversion_rate_if_offered_within_3hrs": 0.50
+      }
+    },
+    "era_2": {
+      "id": 2,
+      "name": "Village Age",
+      "duration_days": {
+        "min": 7,
+        "max": 21
+      },
+      "description": "Introduction to production chains and social features",
+      "total_buildings": 30,
+      "new_buildings": 18,
+      "resources_introduced": ["Clay", "Bricks", "Grain", "Bread", "Clothing", "Animal Skins"],
+      "population_classes": ["Pioneers", "Settlers"],
+      "population_target": 200,
+      "hero_pool_size": 12,
+      "hero_rarities": ["4★", "5★"],
+      "key_features": [
+        "Production chain complexity",
+        "Population happiness management",
+        "Building upgrades",
+        "Alliance system unlocked",
+        "First PvP island competition"
+      ],
+      "era_goals": [
+        "200 population (100 Settlers minimum)",
+        "Join an alliance",
+        "Participate in Alliance vs Alliance event",
+        "Complete production chain: Grain → Bread",
+        "Upgrade 5 buildings to Level 2"
+      ],
+      "gacha_rates": {
+        "4_star": 0.06,
+        "5_star": 0.006
+      }
+    },
+    "era_3": {
+      "id": 3,
+      "name": "Township Age",
+      "duration_days": {
+        "min": 21,
+        "max": 45
+      },
+      "description": "Advanced building specialization and blueprint gacha introduction",
+      "total_buildings": 55,
+      "new_buildings": 25,
+      "resources_introduced": ["Iron Ore", "Iron Bars", "Tools", "Weapons", "Grapes", "Wine", "Honey", "Candles", "Wax"],
+      "population_classes": ["Pioneers", "Settlers", "Citizens"],
+      "population_target": 500,
+      "hero_pool_size": 17,
+      "hero_rarities": ["4★", "5★"],
+      "key_features": [
+        "Building specialization",
+        "Advanced happiness factors",
+        "NPC pirate raids (PvE)",
+        "Blueprint gacha system",
+        "Hero synergy system"
+      ],
+      "era_goals": [
+        "500 population (200 Citizens minimum)",
+        "Defend against 5 pirate raids",
+        "Complete production chain: Ore → Tools → Export",
+        "Research 10 technologies",
+        "Reach Alliance Level 3"
+      ],
+      "gacha_rates": {
+        "4_star": 0.06,
+        "5_star": 0.006
+      },
+      "blueprint_gacha_introduced": true,
+      "legendary_buildings": 4
+    },
+    "era_4": {
+      "id": 4,
+      "name": "Merchant Republic Age",
+      "duration_days": {
+        "min": 45,
+        "max": 75
+      },
+      "description": "Economic complexity with stock markets and legendary building sets",
+      "total_buildings": 85,
+      "new_buildings": 30,
+      "resources_introduced": ["Gemstones", "Glass", "Paper", "Books", "Culture", "Jewelry", "Perfume", "Fine Clothing", "Research Points"],
+      "population_classes": ["Pioneers", "Settlers", "Citizens", "Merchants", "Nobles"],
+      "population_target": 1500,
+      "hero_pool_size": 25,
+      "hero_rarities": ["4★", "5★", "6★"],
+      "key_features": [
+        "Stock market system",
+        "Guild specializations",
+        "Cross-server trading",
+        "Legendary building sets",
+        "Hero ascension system",
+        "Cross-server arena",
+        "World boss events"
+      ],
+      "era_goals": [
+        "1,500 population (150 Nobles minimum)",
+        "Choose and max out Guild specialization",
+        "Complete 1 Legendary Building Set",
+        "Trade with 20 different players",
+        "Generate 100,000 gold/hour"
+      ],
+      "gacha_rates": {
+        "4_star": 0.06,
+        "5_star": 0.006,
+        "6_star": 0.003
+      },
+      "vip_system_introduced": true,
+      "legendary_sets": [
+        {
+          "name": "Knowledge Set",
+          "buildings": 5,
+          "bonus_5_of_5": "+100% Research, Unlocks Enlightenment Age early access"
+        }
+      ]
+    },
+    "era_5": {
+      "id": 5,
+      "name": "Industrial Age",
+      "duration_days": {
+        "min": 75,
+        "max": 120
+      },
+      "description": "Steam power, railways, and automation",
+      "total_buildings": 120,
+      "new_buildings": 35,
+      "resources_introduced": ["Coal", "Steam Power", "Energy", "Inspiration"],
+      "population_classes": ["Citizens", "Merchants", "Nobles", "Engineers", "Inventors"],
+      "population_target": 5000,
+      "hero_pool_size": 40,
+      "hero_rarities": ["4★", "5★", "6★"],
+      "key_features": [
+        "Steam power energy system",
+        "Railway network",
+        "Factory automation",
+        "Alliance territory wars",
+        "Turn-based strategy combat"
+      ],
+      "era_goals": [
+        "5,000 population (1,000 Inventors minimum)",
+        "Build complete railway network (10+ stations)",
+        "Automate 20 production buildings",
+        "Win 2 Alliance Territory Wars",
+        "Generate 500,000 gold/hour"
+      ],
+      "gacha_rates": {
+        "4_star": 0.06,
+        "5_star": 0.006,
+        "6_star": 0.003
+      },
+      "legendary_sets": [
+        {
+          "name": "Steam Lord's Collection",
+          "buildings": 12,
+          "bonus_6_of_12": "+50% coal efficiency",
+          "bonus_12_of_12": "Unlock Perpetual Motion Engine (infinite energy)"
+        }
+      ],
+      "alliance_wars_introduced": true
+    },
+    "era_6": {
+      "id": 6,
+      "name": "Imperial Age",
+      "duration_days": {
+        "min": 120,
+        "max": 180
+      },
+      "description": "Global domination, colonization, world wonders",
+      "total_buildings": 160,
+      "new_buildings": 40,
+      "population_classes": ["Merchants", "Nobles", "Engineers", "Inventors", "Aristocrats", "Diplomats"],
+      "key_features": [
+        "World map with claimable territories",
+        "Colonization mechanics",
+        "World wonders construction",
+        "Embassy system",
+        "Opera houses and culture"
+      ]
+    },
+    "era_7": {
+      "id": 7,
+      "name": "Modern Age",
+      "duration_days": {
+        "min": 180,
+        "max": 250
+      },
+      "description": "Skyscrapers, airports, modern infrastructure",
+      "total_buildings": 195,
+      "new_buildings": 35,
+      "population_classes": ["Engineers", "Inventors", "Aristocrats", "Executives", "Scientists"],
+      "key_features": [
+        "Air trade routes",
+        "International corporations",
+        "Skyscraper construction",
+        "Modern transportation networks"
+      ]
+    },
+    "era_8": {
+      "id": 8,
+      "name": "Digital Age",
+      "duration_days": {
+        "min": 250,
+        "max": 350
+      },
+      "description": "Tech companies, data centers, green energy",
+      "total_buildings": 225,
+      "new_buildings": 30,
+      "population_classes": ["Scientists", "Executives", "Programmers", "Entrepreneurs"],
+      "key_features": [
+        "Tech companies and startups",
+        "Data centers",
+        "Green energy systems",
+        "Cyber warfare (hacking-based PvP)"
+      ]
+    },
+    "era_9": {
+      "id": 9,
+      "name": "Future Age",
+      "duration_days": {
+        "min": 350,
+        "max": 450
+      },
+      "description": "Fusion power, megastructures, space elevator",
+      "total_buildings": 250,
+      "new_buildings": 25,
+      "population_classes": ["Programmers", "Entrepreneurs", "Quantum Engineers", "Transhumanists"],
+      "key_features": [
+        "Fusion power plants",
+        "Megastructure construction",
+        "Space elevator",
+        "Moon base construction (shared mega-project)"
+      ]
+    },
+    "era_10": {
+      "id": 10,
+      "name": "Transcendence Age",
+      "duration_days": {
+        "min": 450,
+        "max": "infinite"
+      },
+      "description": "AI superintelligence, post-scarcity, dyson sphere",
+      "total_buildings": 270,
+      "new_buildings": 20,
+      "population_classes": ["Singularity Citizens"],
+      "key_features": [
+        "AI superintelligence",
+        "Post-scarcity economy",
+        "Dyson sphere construction",
+        "Infinite procedurally generated challenges",
+        "Competitive leaderboards",
+        "Prestige reset system"
+      ],
+      "endgame": true
+    }
+  },
+  "progression_summary": {
+    "total_buildings": 270,
+    "total_population_classes": 15,
+    "average_time_to_complete_all_eras": "450+ days",
+    "designed_for_years_of_content": "3-5 years",
+    "content_update_frequency": {
+      "monthly": "New heroes, buildings, events",
+      "quarterly": "New era unlocks, major features",
+      "yearly": "Expansions, engine updates"
+    }
+  }
+}
