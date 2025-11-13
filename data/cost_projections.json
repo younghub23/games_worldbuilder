@@ -1,0 +1,295 @@
+{
+  "development_costs": {
+    "mvp_phase": {
+      "duration_months": 6,
+      "team": {
+        "creative_director": {
+          "count": 1,
+          "monthly_rate": 12000,
+          "total": 72000
+        },
+        "senior_game_designer": {
+          "count": 1,
+          "monthly_rate": 10000,
+          "total": 60000
+        },
+        "game_designer": {
+          "count": 1,
+          "monthly_rate": 7000,
+          "total": 42000
+        },
+        "backend_engineer_senior": {
+          "count": 1,
+          "monthly_rate": 12000,
+          "total": 72000
+        },
+        "mobile_engineer_ios": {
+          "count": 1,
+          "monthly_rate": 11000,
+          "total": 66000
+        },
+        "mobile_engineer_android": {
+          "count": 1,
+          "monthly_rate": 11000,
+          "total": 66000
+        },
+        "full_stack_engineer": {
+          "count": 1,
+          "monthly_rate": 10000,
+          "total": 60000
+        },
+        "2d_artist_animator": {
+          "count": 1,
+          "monthly_rate": 8000,
+          "total": 48000
+        },
+        "ui_ux_designer": {
+          "count": 1,
+          "monthly_rate": 8000,
+          "total": 48000
+        },
+        "qa_tester": {
+          "count": 1,
+          "monthly_rate": 5000,
+          "total": 30000
+        },
+        "community_manager": {
+          "count": 1,
+          "monthly_rate": 5000,
+          "total": 30000
+        }
+      },
+      "team_subtotal": 594000,
+      "additional_costs": {
+        "employer_taxes_benefits": {
+          "rate": 0.30,
+          "amount": 178200
+        },
+        "office_equipment": 50000,
+        "software_licenses": 15000,
+        "third_party_services": 25000,
+        "legal": 20000
+      },
+      "total": 882200
+    },
+    "soft_launch_phase": {
+      "duration_months": 3,
+      "team_expansion": {
+        "data_analyst": {
+          "count": 1,
+          "monthly_rate": 8000,
+          "total": 24000
+        },
+        "qa_tester_additional": {
+          "count": 1,
+          "monthly_rate": 5000,
+          "total": 15000
+        },
+        "marketing_manager": {
+          "count": 1,
+          "monthly_rate": 9000,
+          "total": 27000
+        },
+        "existing_team_continuation": {
+          "monthly_rate": 99000,
+          "total": 297000
+        }
+      },
+      "soft_launch_costs": {
+        "user_acquisition_testing": 50000,
+        "localization": 15000,
+        "server_infrastructure_setup": 30000,
+        "app_store_optimization": 10000
+      },
+      "total": 468000
+    },
+    "pre_global_launch": {
+      "duration_months": 1,
+      "team_cost": 117000,
+      "marketing_materials": 40000,
+      "pr_agency": 15000,
+      "influencer_seed": 25000,
+      "server_scaling": 20000,
+      "total": 217000
+    },
+    "total_pre_launch": 1567200
+  },
+  "infrastructure_costs": {
+    "soft_launch_10k_dau": {
+      "monthly": 2200,
+      "breakdown": {
+        "compute": 800,
+        "database": 600,
+        "storage": 200,
+        "cdn": 300,
+        "other_services": 300
+      }
+    },
+    "growing_50k_dau": {
+      "monthly": 8300,
+      "breakdown": {
+        "compute": 3500,
+        "database": 2000,
+        "storage": 800,
+        "cdn": 1200,
+        "other_services": 800
+      }
+    },
+    "steady_state_200k_dau": {
+      "monthly": 27500,
+      "breakdown": {
+        "compute": 12000,
+        "database": 6500,
+        "storage": 2500,
+        "cdn": 4000,
+        "other_services": 2500
+      }
+    },
+    "high_scale_1m_dau": {
+      "monthly": 98000,
+      "breakdown": {
+        "compute": 45000,
+        "database": 22000,
+        "storage": 8000,
+        "cdn": 15000,
+        "other_services": 8000
+      }
+    }
+  },
+  "third_party_services": {
+    "monthly_at_launch": 3900,
+    "breakdown": {
+      "analytics_monitoring": {
+        "firebase_google_analytics": 500,
+        "mixpanel_amplitude": 800,
+        "crash_reporting": 200,
+        "performance_monitoring": 300
+      },
+      "backend_services": {
+        "authentication": 400,
+        "push_notifications": 300,
+        "customer_support": 500,
+        "payment_processing": "variable_2.9_percent"
+      },
+      "development_tools": {
+        "github_enterprise": 200,
+        "ci_cd": 300,
+        "testing_platforms": 400
+      }
+    }
+  },
+  "operational_costs": {
+    "post_launch_team": {
+      "monthly_salaries": 179000,
+      "breakdown": {
+        "creative_director": 12000,
+        "game_designers": 17000,
+        "engineers": 66000,
+        "artists_ui_designers": 24000,
+        "qa_testers": 10000,
+        "data_analyst": 8000,
+        "community_managers": 10000,
+        "marketing_manager": 9000,
+        "customer_support": 12000,
+        "product_manager": 11000
+      },
+      "total_headcount": 22,
+      "with_benefits_taxes": 232700
+    },
+    "other_operating": {
+      "office_equipment": 15000,
+      "software_licenses": 5000,
+      "legal_accounting": 3000,
+      "miscellaneous": 5000
+    },
+    "total_monthly": 260700,
+    "total_annual": 3128400
+  },
+  "marketing_costs": {
+    "launch_campaign": {
+      "influencer_partnerships": 150000,
+      "paid_ads": 200000,
+      "pr_agency": 30000,
+      "app_store_features": 20000,
+      "launch_events": 50000,
+      "total": 450000
+    },
+    "user_acquisition": {
+      "cpi_by_channel": {
+        "facebook_instagram": {
+          "min": 2.50,
+          "max": 4.00
+        },
+        "google_uac": {
+          "min": 1.50,
+          "max": 3.00
+        },
+        "tiktok": {
+          "min": 3.00,
+          "max": 5.00
+        },
+        "reddit": {
+          "min": 2.00,
+          "max": 3.50
+        },
+        "influencer_sponsorships": {
+          "min": 1.00,
+          "max": 2.00
+        }
+      },
+      "blended_average_cpi": 2.50,
+      "monthly_scenarios": {
+        "conservative": {
+          "budget": 50000,
+          "installs": 20000,
+          "d1_retention_rate": 0.40,
+          "retained_users": 8000,
+          "effective_cost_per_retained": 6.25
+        },
+        "moderate": {
+          "budget": 150000,
+          "installs": 60000,
+          "d1_retention_rate": 0.40,
+          "retained_users": 24000
+        },
+        "aggressive": {
+          "budget": 400000,
+          "installs": 160000,
+          "d1_retention_rate": 0.40,
+          "retained_users": 64000
+        }
+      }
+    }
+  },
+  "budget_scenarios": {
+    "minimum_viable": {
+      "lean_team": 400000,
+      "mvp_development": 600000,
+      "minimal_marketing": 50000,
+      "infrastructure": 15000,
+      "total": 665000,
+      "risk_level": "extremely_high",
+      "success_probability": 0.175
+    },
+    "recommended": {
+      "full_team": 850000,
+      "complete_mvp_polish": 1200000,
+      "proper_soft_launch": 300000,
+      "launch_marketing": 500000,
+      "infrastructure_contingency": 150000,
+      "total": 2500000,
+      "risk_level": "moderate",
+      "success_probability": 0.35
+    },
+    "optimal": {
+      "experienced_team": 1500000,
+      "polished_product": 2500000,
+      "extended_soft_launch": 500000,
+      "aggressive_marketing": 1000000,
+      "twelve_month_runway": 4000000,
+      "total": 9500000,
+      "risk_level": "lower",
+      "success_probability": 0.525
+    }
+  }
+}

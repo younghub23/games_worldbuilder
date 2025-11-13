@@ -1,0 +1,457 @@
+{
+  "industry_reality": {
+    "failure_rates": {
+      "never_break_even": 0.70,
+      "shutdown_within_3_years": 0.85,
+      "never_achieve_scale": 0.95
+    },
+    "revenue_concentration": {
+      "top_5_percent_market_share": 0.85,
+      "description": "Top 5% of games capture 85% of all mobile gaming revenue"
+    },
+    "median_performance": {
+      "lifetime_revenue": 500000,
+      "development_cost": {
+        "min": 1000000,
+        "max": 2000000
+      }
+    }
+  },
+  "retention_benchmarks": {
+    "mobile_games_average": {
+      "d1": {
+        "poor": 0.25,
+        "average": 0.40,
+        "good": 0.55,
+        "excellent": 0.70
+      },
+      "d7": {
+        "poor": 0.10,
+        "average": 0.20,
+        "good": 0.35,
+        "excellent": 0.50
+      },
+      "d30": {
+        "poor": 0.04,
+        "average": 0.08,
+        "good": 0.15,
+        "excellent": 0.25
+      }
+    },
+    "strategy_games": {
+      "d1": 0.45,
+      "d7": 0.25,
+      "d30": 0.12,
+      "note": "Strategy/empire games typically have higher retention than casual games"
+    }
+  },
+  "monetization_benchmarks": {
+    "paying_conversion_rates": {
+      "poor": 0.01,
+      "average": 0.03,
+      "good": 0.05,
+      "excellent": 0.10
+    },
+    "arppu_monthly": {
+      "casual_games": {
+        "min": 5,
+        "max": 20
+      },
+      "mid_core_games": {
+        "min": 25,
+        "max": 75
+      },
+      "hardcore_strategy": {
+        "min": 50,
+        "max": 200
+      }
+    },
+    "arpdau": {
+      "tier_3_games": {
+        "min": 0.01,
+        "max": 0.05
+      },
+      "tier_2_games": {
+        "min": 0.10,
+        "max": 0.30
+      },
+      "tier_1_games": {
+        "min": 0.50,
+        "max": 1.50
+      },
+      "top_grossing": {
+        "min": 2.00,
+        "max": 5.00
+      }
+    }
+  },
+  "user_acquisition_benchmarks": {
+    "cpi_by_platform_2024": {
+      "ios": {
+        "casual": {
+          "min": 1.50,
+          "max": 3.00
+        },
+        "mid_core": {
+          "min": 2.50,
+          "max": 5.00
+        },
+        "hardcore": {
+          "min": 4.00,
+          "max": 8.00
+        }
+      },
+      "android": {
+        "casual": {
+          "min": 1.00,
+          "max": 2.50
+        },
+        "mid_core": {
+          "min": 2.00,
+          "max": 4.00
+        },
+        "hardcore": {
+          "min": 3.00,
+          "max": 6.00
+        }
+      }
+    },
+    "cpi_by_region": {
+      "tier_1": {
+        "regions": ["US", "Canada", "UK", "Australia"],
+        "multiplier": 1.0,
+        "avg_cpi": 3.50
+      },
+      "tier_2": {
+        "regions": ["Western Europe", "Japan", "South Korea"],
+        "multiplier": 0.80,
+        "avg_cpi": 2.80
+      },
+      "tier_3": {
+        "regions": ["Eastern Europe", "Latin America", "Southeast Asia"],
+        "multiplier": 0.40,
+        "avg_cpi": 1.40
+      },
+      "tier_4": {
+        "regions": ["India", "Africa", "Middle East"],
+        "multiplier": 0.20,
+        "avg_cpi": 0.70
+      }
+    },
+    "organic_vs_paid": {
+      "poor_organic": {
+        "organic_percentage": 0.10,
+        "paid_percentage": 0.90
+      },
+      "average_organic": {
+        "organic_percentage": 0.30,
+        "paid_percentage": 0.70
+      },
+      "good_organic": {
+        "organic_percentage": 0.50,
+        "paid_percentage": 0.50
+      },
+      "viral_hit": {
+        "organic_percentage": 0.80,
+        "paid_percentage": 0.20
+      }
+    }
+  },
+  "team_size_benchmarks": {
+    "mvp_phase": {
+      "indie_lean": {
+        "team_size": 5,
+        "monthly_burn": 35000,
+        "description": "Bare minimum team for prototype"
+      },
+      "small_studio": {
+        "team_size": 11,
+        "monthly_burn": 99000,
+        "description": "Recommended for quality MVP"
+      },
+      "medium_studio": {
+        "team_size": 18,
+        "monthly_burn": 160000,
+        "description": "Well-resourced development"
+      }
+    },
+    "live_ops": {
+      "maintenance_mode": {
+        "team_size": 8,
+        "monthly_burn": 75000,
+        "description": "Minimal updates, basic support"
+      },
+      "active_development": {
+        "team_size": 22,
+        "monthly_burn": 232700,
+        "description": "Regular content updates, full support"
+      },
+      "aggressive_growth": {
+        "team_size": 40,
+        "monthly_burn": 450000,
+        "description": "Rapid expansion, multiple concurrent features"
+      }
+    }
+  },
+  "infrastructure_benchmarks": {
+    "cost_per_dau": {
+      "efficient": {
+        "per_dau_monthly": 0.10,
+        "description": "Well-optimized infrastructure"
+      },
+      "average": {
+        "per_dau_monthly": 0.15,
+        "description": "Standard cloud setup"
+      },
+      "inefficient": {
+        "per_dau_monthly": 0.25,
+        "description": "Unoptimized or over-provisioned"
+      }
+    },
+    "scaling_phases": {
+      "0_10k_dau": {
+        "monthly_cost": 2500,
+        "description": "Single region, minimal redundancy"
+      },
+      "10k_50k_dau": {
+        "monthly_cost": 8000,
+        "description": "Starting to scale, basic redundancy"
+      },
+      "50k_200k_dau": {
+        "monthly_cost": 27500,
+        "description": "Multi-region, auto-scaling"
+      },
+      "200k_500k_dau": {
+        "monthly_cost": 55000,
+        "description": "Global distribution, high availability"
+      },
+      "500k_1m_dau": {
+        "monthly_cost": 98000,
+        "description": "Fully distributed, maximum redundancy"
+      }
+    }
+  },
+  "success_factors": {
+    "team_experience": {
+      "weight": 0.40,
+      "impact_multipliers": {
+        "first_time_team": 0.50,
+        "some_experience": 1.00,
+        "prior_hit_game": 3.00,
+        "multiple_hits": 5.00
+      }
+    },
+    "product_market_fit": {
+      "weight": 0.30,
+      "indicators": [
+        "Innovative but familiar gameplay",
+        "Solves real player need",
+        "Clear differentiation from competitors",
+        "Strong soft launch metrics"
+      ]
+    },
+    "timing_and_luck": {
+      "weight": 0.15,
+      "factors": [
+        "Market saturation in subgenre",
+        "Major competitor launches",
+        "Cultural trends and zeitgeist",
+        "Platform algorithm changes"
+      ]
+    },
+    "execution_quality": {
+      "weight": 0.10,
+      "indicators": [
+        "Bug-free launch",
+        "Performance optimization",
+        "Player feedback responsiveness",
+        "Consistent content cadence"
+      ]
+    },
+    "marketing_savvy": {
+      "weight": 0.05,
+      "factors": [
+        "Influencer relationships",
+        "Community building",
+        "Viral mechanics",
+        "App store optimization"
+      ]
+    }
+  },
+  "competitor_benchmarks": {
+    "tier_1_games": {
+      "examples": ["Clash of Clans", "Clash Royale", "Rise of Kingdoms"],
+      "estimated_dau": {
+        "min": 5000000,
+        "max": 20000000
+      },
+      "estimated_monthly_revenue": {
+        "min": 30000000,
+        "max": 100000000
+      },
+      "development_time_years": {
+        "min": 2,
+        "max": 4
+      },
+      "team_size": {
+        "min": 50,
+        "max": 200
+      }
+    },
+    "tier_2_games": {
+      "examples": ["State of Survival", "Age of Z", "Guns of Glory"],
+      "estimated_dau": {
+        "min": 500000,
+        "max": 2000000
+      },
+      "estimated_monthly_revenue": {
+        "min": 5000000,
+        "max": 20000000
+      },
+      "development_time_years": {
+        "min": 1.5,
+        "max": 3
+      },
+      "team_size": {
+        "min": 30,
+        "max": 80
+      }
+    },
+    "tier_3_games": {
+      "examples": ["Various indie strategy games"],
+      "estimated_dau": {
+        "min": 50000,
+        "max": 300000
+      },
+      "estimated_monthly_revenue": {
+        "min": 300000,
+        "max": 2000000
+      },
+      "development_time_years": {
+        "min": 1,
+        "max": 2
+      },
+      "team_size": {
+        "min": 10,
+        "max": 30
+      }
+    }
+  },
+  "funding_benchmarks": {
+    "pre_seed": {
+      "typical_raise": {
+        "min": 250000,
+        "max": 1000000
+      },
+      "valuation": {
+        "min": 1000000,
+        "max": 4000000
+      },
+      "equity_given": {
+        "min": 0.10,
+        "max": 0.25
+      },
+      "stage": "Prototype or early concept"
+    },
+    "seed": {
+      "typical_raise": {
+        "min": 2000000,
+        "max": 5000000
+      },
+      "valuation": {
+        "min": 8000000,
+        "max": 15000000
+      },
+      "equity_given": {
+        "min": 0.20,
+        "max": 0.40
+      },
+      "stage": "Working prototype with some traction"
+    },
+    "series_a": {
+      "typical_raise": {
+        "min": 8000000,
+        "max": 15000000
+      },
+      "valuation": {
+        "min": 30000000,
+        "max": 60000000
+      },
+      "equity_given": {
+        "min": 0.15,
+        "max": 0.30
+      },
+      "stage": "Soft launch with proven metrics"
+    },
+    "publisher_deals": {
+      "revenue_share": {
+        "developer_favorable": {
+          "developer": 0.70,
+          "publisher": 0.30
+        },
+        "balanced": {
+          "developer": 0.50,
+          "publisher": 0.50
+        },
+        "publisher_favorable": {
+          "developer": 0.30,
+          "publisher": 0.70
+        }
+      },
+      "equity_taken": {
+        "min": 0.20,
+        "max": 0.40
+      },
+      "funding_coverage": "100% of development and marketing"
+    }
+  },
+  "timeline_benchmarks": {
+    "mvp_development": {
+      "indie_speed": {
+        "months": 12,
+        "description": "Small team, limited scope"
+      },
+      "standard": {
+        "months": 6,
+        "description": "Full team, focused scope"
+      },
+      "polished": {
+        "months": 9,
+        "description": "Experienced team, comprehensive features"
+      }
+    },
+    "soft_launch_to_global": {
+      "rushed": {
+        "months": 1,
+        "risk": "High risk of poor metrics"
+      },
+      "standard": {
+        "months": 3,
+        "risk": "Moderate, good for iteration"
+      },
+      "extended": {
+        "months": 6,
+        "risk": "Lower risk, thorough validation"
+      }
+    },
+    "time_to_profitability": {
+      "failure": "Never",
+      "weak": {
+        "months": 48,
+        "description": "4 years, barely sustainable"
+      },
+      "moderate": {
+        "months": 30,
+        "description": "2.5 years, healthy growth"
+      },
+      "strong": {
+        "months": 18,
+        "description": "1.5 years, rapid success"
+      },
+      "breakout": {
+        "months": 10,
+        "description": "< 1 year, exceptional performance"
+      }
+    }
+  }
+}

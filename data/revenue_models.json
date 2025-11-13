@@ -1,0 +1,374 @@
+{
+  "player_conversion_funnel": {
+    "base_installs": 100000,
+    "retention_rates": {
+      "d1": 0.40,
+      "d7": 0.20,
+      "d30": 0.08
+    },
+    "retention_counts": {
+      "d1_players": 40000,
+      "d7_players": 20000,
+      "d30_players": 8000
+    },
+    "paying_conversion": {
+      "rate": 0.03,
+      "paying_users": 240
+    }
+  },
+  "monetization_model": {
+    "free_players": {
+      "percentage": 0.97,
+      "direct_revenue": 0,
+      "ad_revenue_monthly": {
+        "min": 0.50,
+        "max": 1.00
+      },
+      "indirect_value": "community_content_competition"
+    },
+    "minnows": {
+      "percentage": 0.02,
+      "spend_range": {
+        "min": 5,
+        "max": 20
+      },
+      "average_monthly_spend": 10,
+      "primary_purchases": [
+        "Season Pass",
+        "Small gem packs"
+      ]
+    },
+    "dolphins": {
+      "percentage": 0.008,
+      "spend_range": {
+        "min": 50,
+        "max": 100
+      },
+      "average_monthly_spend": 75,
+      "primary_purchases": [
+        "Multiple passes",
+        "Resource packs",
+        "Gacha pulls"
+      ]
+    },
+    "whales": {
+      "percentage": 0.002,
+      "spend_range": {
+        "min": 500,
+        "max": "unlimited"
+      },
+      "average_monthly_spend": 800,
+      "primary_purchases": [
+        "VIP levels",
+        "Exclusive heroes",
+        "Premium cosmetics"
+      ]
+    }
+  },
+  "revenue_scenarios": {
+    "modest_success": {
+      "month": 6,
+      "total_installs": 500000,
+      "d30_active_users": 40000,
+      "paying_users": 1200,
+      "paying_conversion_rate": 0.03,
+      "revenue_breakdown": {
+        "minnows": {
+          "count": 800,
+          "avg_spend": 10,
+          "total": 8000
+        },
+        "dolphins": {
+          "count": 320,
+          "avg_spend": 75,
+          "total": 24000
+        },
+        "whales": {
+          "count": 80,
+          "avg_spend": 800,
+          "total": 64000
+        }
+      },
+      "monthly_revenue_gross": 96000,
+      "platform_fee_rate": 0.30,
+      "monthly_revenue_net": 67200
+    },
+    "moderate_success": {
+      "month": 12,
+      "total_installs": 2000000,
+      "d30_active_users": 160000,
+      "paying_users": 5600,
+      "paying_conversion_rate": 0.035,
+      "revenue_breakdown": {
+        "minnows": {
+          "count": 3360,
+          "avg_spend": 10,
+          "total": 33600
+        },
+        "dolphins": {
+          "count": 1680,
+          "avg_spend": 75,
+          "total": 126000
+        },
+        "whales": {
+          "count": 560,
+          "avg_spend": 800,
+          "total": 448000
+        }
+      },
+      "monthly_revenue_gross": 607600,
+      "platform_fee_rate": 0.30,
+      "monthly_revenue_net": 425320
+    },
+    "strong_success": {
+      "month": 24,
+      "total_installs": 10000000,
+      "d30_active_users": 600000,
+      "paying_users": 24000,
+      "paying_conversion_rate": 0.04,
+      "revenue_breakdown": {
+        "minnows": {
+          "count": 14400,
+          "avg_spend": 10,
+          "total": 144000
+        },
+        "dolphins": {
+          "count": 7200,
+          "avg_spend": 85,
+          "total": 612000
+        },
+        "whales": {
+          "count": 2400,
+          "avg_spend": 1000,
+          "total": 2400000
+        }
+      },
+      "monthly_revenue_gross": 3156000,
+      "platform_fee_rate": 0.30,
+      "monthly_revenue_net": 2209200
+    }
+  },
+  "yearly_financials": {
+    "year_1_moderate_path": {
+      "costs": {
+        "pre_launch_development": 1600000,
+        "infrastructure": 180000,
+        "operations": 3128000,
+        "marketing_ua": 2400000,
+        "total": 7308000
+      },
+      "revenue": {
+        "months_1_6_avg": 50000,
+        "months_1_6_total": 300000,
+        "months_7_12_avg": 300000,
+        "months_7_12_total": 1800000,
+        "total": 2100000
+      },
+      "net": -5208000,
+      "status": "expected_loss"
+    },
+    "year_2_moderate_path": {
+      "costs": {
+        "infrastructure": 480000,
+        "operations": 3360000,
+        "marketing_ua": 3000000,
+        "content_updates": 400000,
+        "total": 7240000
+      },
+      "revenue": {
+        "monthly_avg": 400000,
+        "total": 4800000
+      },
+      "net": -2440000,
+      "cumulative_loss": -7648000,
+      "status": "expected_loss"
+    },
+    "year_3_moderate_path": {
+      "costs": {
+        "infrastructure": 600000,
+        "operations": 3500000,
+        "marketing_ua": 2400000,
+        "total": 6500000
+      },
+      "revenue": {
+        "monthly_avg": 600000,
+        "total": 7200000
+      },
+      "net": 700000,
+      "cumulative": -6948000,
+      "status": "first_profitable_year"
+    }
+  },
+  "break_even_analysis": {
+    "moderate_success": {
+      "break_even_month_range": {
+        "min": 38,
+        "max": 40
+      },
+      "break_even_years": {
+        "min": 3.2,
+        "max": 3.3
+      },
+      "total_investment_before_profit": 7500000,
+      "post_break_even_monthly_profit": {
+        "min": 200000,
+        "max": 500000
+      }
+    },
+    "strong_success": {
+      "break_even_month_range": {
+        "min": 20,
+        "max": 24
+      },
+      "break_even_years": {
+        "min": 1.7,
+        "max": 2.0
+      },
+      "total_investment_before_profit": 5000000,
+      "post_break_even_monthly_profit": {
+        "min": 1000000,
+        "max": 2000000
+      }
+    },
+    "weak_performance": {
+      "breaks_even": false,
+      "shutdown_month_range": {
+        "min": 18,
+        "max": 24
+      },
+      "total_loss": {
+        "min": 8000000,
+        "max": 12000000
+      }
+    }
+  },
+  "outcome_probabilities": {
+    "failure": {
+      "probability": 0.40,
+      "max_d30_users": 100000,
+      "peak_monthly_revenue": 150000,
+      "total_loss": {
+        "min": 10000000,
+        "max": 15000000
+      },
+      "shutdown_month_range": {
+        "min": 18,
+        "max": 30
+      }
+    },
+    "modest_success": {
+      "probability": 0.35,
+      "d30_users_range": {
+        "min": 150000,
+        "max": 250000
+      },
+      "monthly_revenue_range": {
+        "min": 300000,
+        "max": 600000
+      },
+      "break_even_years": {
+        "min": 3,
+        "max": 4
+      },
+      "five_year_profit": {
+        "min": 2000000,
+        "max": 5000000
+      },
+      "roi_percentage": {
+        "min": 15,
+        "max": 30
+      }
+    },
+    "moderate_success": {
+      "probability": 0.20,
+      "d30_users_range": {
+        "min": 500000,
+        "max": 1000000
+      },
+      "monthly_revenue_range": {
+        "min": 1000000,
+        "max": 2000000
+      },
+      "break_even_years": {
+        "min": 2,
+        "max": 3
+      },
+      "five_year_profit": {
+        "min": 15000000,
+        "max": 30000000
+      },
+      "roi_percentage": {
+        "min": 100,
+        "max": 200
+      }
+    },
+    "major_success": {
+      "probability": 0.045,
+      "d30_users": "2000000+",
+      "monthly_revenue_range": {
+        "min": 5000000,
+        "max": 10000000
+      },
+      "break_even_years": {
+        "min": 1,
+        "max": 2
+      },
+      "five_year_profit": {
+        "min": 100000000,
+        "max": 200000000
+      },
+      "roi_percentage": {
+        "min": 500,
+        "max": 1000
+      }
+    },
+    "breakout_hit": {
+      "probability": 0.005,
+      "d30_users": "10000000+",
+      "monthly_revenue": "20000000+",
+      "break_even_month_range": {
+        "min": 8,
+        "max": 12
+      },
+      "five_year_profit": "500000000+",
+      "roi_percentage": "2000+"
+    }
+  },
+  "expected_value_calculation": {
+    "components": [
+      {
+        "scenario": "failure",
+        "probability": 0.40,
+        "outcome": -12000000,
+        "weighted_value": -4800000
+      },
+      {
+        "scenario": "modest_success",
+        "probability": 0.35,
+        "outcome": 3000000,
+        "weighted_value": 1050000
+      },
+      {
+        "scenario": "moderate_success",
+        "probability": 0.20,
+        "outcome": 20000000,
+        "weighted_value": 4000000
+      },
+      {
+        "scenario": "major_success",
+        "probability": 0.045,
+        "outcome": 120000000,
+        "weighted_value": 5400000
+      },
+      {
+        "scenario": "breakout_hit",
+        "probability": 0.005,
+        "outcome": 400000000,
+        "weighted_value": 2000000
+      }
+    ],
+    "total_expected_value": 7650000,
+    "expected_roi_percentage": 50,
+    "note": "Before accounting for opportunity cost"
+  }
+}
