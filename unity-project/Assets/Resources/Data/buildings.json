@@ -1,0 +1,144 @@
+[
+  {
+    "id": "town_hall",
+    "name": "Town Hall",
+    "description": "The heart of your empire. Upgrading unlocks new buildings and features.",
+    "cost": {
+      "gold": 0,
+      "wood": 0,
+      "stone": 0
+    },
+    "buildTime": 0,
+    "maxLevel": 25,
+    "produces": null
+  },
+  {
+    "id": "gold_mine",
+    "name": "Gold Mine",
+    "description": "Produces gold over time. Higher levels increase production rate.",
+    "cost": {
+      "gold": 500,
+      "wood": 200,
+      "stone": 100
+    },
+    "buildTime": 60,
+    "maxLevel": 20,
+    "produces": {
+      "resource": "gold",
+      "rate": 100,
+      "capacity": 5000
+    }
+  },
+  {
+    "id": "lumber_mill",
+    "name": "Lumber Mill",
+    "description": "Produces wood over time. Essential for building construction.",
+    "cost": {
+      "gold": 400,
+      "wood": 150,
+      "stone": 50
+    },
+    "buildTime": 45,
+    "maxLevel": 20,
+    "produces": {
+      "resource": "wood",
+      "rate": 80,
+      "capacity": 4000
+    }
+  },
+  {
+    "id": "stone_quarry",
+    "name": "Stone Quarry",
+    "description": "Produces stone over time. Required for advanced buildings.",
+    "cost": {
+      "gold": 600,
+      "wood": 300,
+      "stone": 200
+    },
+    "buildTime": 90,
+    "maxLevel": 20,
+    "produces": {
+      "resource": "stone",
+      "rate": 60,
+      "capacity": 3000
+    }
+  },
+  {
+    "id": "barracks",
+    "name": "Barracks",
+    "description": "Train infantry troops to defend your empire and attack enemies.",
+    "cost": {
+      "gold": 1000,
+      "wood": 500,
+      "stone": 250
+    },
+    "buildTime": 120,
+    "maxLevel": 15,
+    "produces": null
+  },
+  {
+    "id": "archery_range",
+    "name": "Archery Range",
+    "description": "Train ranged units to support your army.",
+    "cost": {
+      "gold": 1200,
+      "wood": 600,
+      "stone": 300
+    },
+    "buildTime": 150,
+    "maxLevel": 15,
+    "produces": null
+  },
+  {
+    "id": "stable",
+    "name": "Stable",
+    "description": "Train cavalry units for rapid strikes.",
+    "cost": {
+      "gold": 1500,
+      "wood": 700,
+      "stone": 400
+    },
+    "buildTime": 180,
+    "maxLevel": 15,
+    "produces": null
+  },
+  {
+    "id": "workshop",
+    "name": "Workshop",
+    "description": "Craft equipment and upgrade hero gear.",
+    "cost": {
+      "gold": 2000,
+      "wood": 1000,
+      "stone": 500
+    },
+    "buildTime": 240,
+    "maxLevel": 10,
+    "produces": null
+  },
+  {
+    "id": "academy",
+    "name": "Academy",
+    "description": "Research technologies to boost your empire's capabilities.",
+    "cost": {
+      "gold": 3000,
+      "wood": 1500,
+      "stone": 1000
+    },
+    "buildTime": 300,
+    "maxLevel": 10,
+    "produces": null
+  },
+  {
+    "id": "marketplace",
+    "name": "Marketplace",
+    "description": "Trade resources with other players.",
+    "cost": {
+      "gold": 1500,
+      "wood": 800,
+      "stone": 400
+    },
+    "buildTime": 180,
+    "maxLevel": 10,
+    "produces": null
+  }
+]
